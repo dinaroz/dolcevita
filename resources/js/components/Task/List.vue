@@ -121,10 +121,7 @@ export default {
             if (tasks) {
                 if (this.filterDate != "All") {
                     let filter = tasks.filter(function (task) {
-                        if(!filter.includes(_this.filterDate))
-                        {
-                            return task.destination_date.includes(_this.filterDate);
-                        }
+                    return task.destination_date.includes(_this.filterDate);
                 });
                 return filter;
             }else{
